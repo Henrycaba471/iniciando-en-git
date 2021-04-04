@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #777;
+    text-align: center;
+}
+.ejercicios-js{
+    margin-top: 20px;
+    border: 2px solid rgb(71, 110, 45);
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+p{
+    font-size: 20px;
+    padding: 10px;
+}
+.ejercicio-1 label{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(10, 245, 253);
+    padding-right: 10px;
+}
+.ejercicio-1 input{
+    width: 60%;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(10, 245, 253, 0.5);
+    background: transparent;
+}
+
+.ejercicio-1 button{
+    font-size: 20px;
+    background: rgb(8, 51, 131);
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+.ejercicio-1 span{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+}
