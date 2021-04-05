@@ -16,9 +16,7 @@ borrar.addEventListener('click',()=>{
     descripcion.innerHTML=(':)')
 });
 
-//2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
-
-
+//2
 const recortarCaracteres = ()=>{
 
     let textoARecortar = document.getElementById('entrada-recorte').value;
@@ -51,4 +49,30 @@ borrar2.addEventListener('click',()=>{
     textoARecortar.value = '';
     datosProcesados.innerHTML=(':)');
     recorte.value = '';
+});
+
+// 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal']. 
+
+const cadenaAArreglo = ()=>{
+
+    let separador = document.getElementById('separador').value;
+    let textoAConvertir = document.getElementById('entrada-3').value;
+    let resultado3 = document.getElementById('resultado3');
+
+    if (textoAConvertir.length == '') {
+        return resultado3.innerHTML = ('No has ingresado ningun texto');
+    }
+    console.log('El texto ingresado es:','"',textoAConvertir,'"', 'y quedaria así:',textoAConvertir.split(separador));
+    return resultado3.innerHTML = (`El texto ingresado es: "${textoAConvertir}" y quedaria así: ${textoAConvertir.split(separador)}`);
+}
+
+let separador = document.getElementById('separador');
+let textoAConvertir = document.getElementById('entrada-3');
+let resultado3 = document.getElementById('resultado3');
+let borrar3 = document.getElementById('clear3');
+
+borrar3.addEventListener('click',()=>{
+    textoAConvertir.value = '';
+    separador.value = '';
+    resultado3.innerHTML = (':)')
 });
