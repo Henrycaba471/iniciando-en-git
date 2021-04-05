@@ -51,8 +51,7 @@ borrar2.addEventListener('click',()=>{
     recorte.value = '';
 });
 
-// 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal']. 
-
+//3
 const cadenaAArreglo = ()=>{
 
     let separador = document.getElementById('separador').value;
@@ -76,3 +75,25 @@ borrar3.addEventListener('click',()=>{
     separador.value = '';
     resultado3.innerHTML = (':)')
 });
+
+//4 
+const repetirTexto = ()=>{
+
+    let repetidor = document.getElementById('repetidor').value;
+    let textoARepetir = document.getElementById('entrada-4').value;
+    let resultado4 = document.getElementById('resultado4');
+
+    if (textoARepetir.length == '') {
+        return resultado4.innerHTML = ('No has ingresado ningun texto');
+    }
+    if (repetidor.length == '') {
+        return resultado4.innerHTML = ('Ingresa las veces a repetir');
+    }
+
+     resultado4.innerHTML = (`El texto a repetir es: "${textoARepetir}" las vesces a repetir son "${repetidor}" se esta repitiendo por consola`);
+
+    for (let i = 1; i <= repetidor; i++) {
+       console.info(textoARepetir,i);
+    }
+}
+
