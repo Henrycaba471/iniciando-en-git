@@ -1,5 +1,5 @@
 'use strict';
-//1 
+//1
 const contarCaracteres = ()=>{
     let caracteresTexto = document.getElementById('entrada').value;
     let descripcion = document.getElementById('resultado');
@@ -76,7 +76,7 @@ borrar3.addEventListener('click',()=>{
     resultado3.innerHTML = (':)')
 });
 
-//4 
+//4
 const repetirTexto = ()=>{
 
     let repetidor = document.getElementById('repetidor').value;
@@ -90,10 +90,10 @@ const repetirTexto = ()=>{
         return resultado4.innerHTML = ('Ingresa las veces a repetir');
     }
 
-     resultado4.innerHTML = (`El texto a repetir es: "${textoARepetir}" las vesces a repetir son "${repetidor}" se esta repitiendo por consola`);
+    resultado4.innerHTML = (`El texto a repetir es: "${textoARepetir}" las vesces a repetir son "${repetidor}" se esta repitiendo por consola`);
 
     for (let i = 1; i <= repetidor; i++) {
-       console.info(textoARepetir,i);
+    console.info(textoARepetir,i);
     }
 }
 
