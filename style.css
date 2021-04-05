@@ -56,3 +56,42 @@ p{
     width: 100%;
     font-size: 20px;
 }
+.ejercicio-2 label {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: rgb(10, 245, 253);
+  padding-right: 10px;
+}
+.ejercicio-2 #recorte{
+  width: 60px;
+}
+.ejercicio-2 input {
+  width: 75%;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(10, 245, 253, 0.5);
+  background: transparent;
+  padding-left: 5px;
+  color: #F2F2F0;
+  margin-bottom: 10px;
+}
+
+.ejercicio-2 button {
+  font-size: 20px;
+  background: rgb(8, 51, 131);
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  color: #F2F2F0;
+}
+.ejercicio-2 span {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+}
+.ejercicio-2 {
+  border: 1px solid #000;
+  margin: 10px;
+}
