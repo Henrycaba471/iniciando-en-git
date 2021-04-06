@@ -163,3 +163,30 @@ borrar6.addEventListener('click', () => {
     pbuscada.value = '';
     resultado6.innerHTML = (':)');
 });
+
+//7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+const textoPalindromo = () => {
+    let palabraIngresada = document.getElementById('entrada-7').value;
+    let resultado7 = document.getElementById('resultado7');
+    if (!palabraIngresada) {
+        return resultado7.innerHTML = ('No has ingresaso ninguna palabra :(');
+    }
+
+    palabraIngresada = palabraIngresada.toUpperCase();
+    let comparar = palabraIngresada.split('').reverse().join('');
+
+    if (palabraIngresada !== comparar) {
+        return resultado7.innerHTML = (`La palabra ${palabraIngresada} no es Palindroma`);
+    }
+    if (palabraIngresada === comparar) {
+        return resultado7.innerHTML = (`La palabra ${palabraIngresada} es Palindroma`);
+    }
+}
+
+let palabraIngresada = document.getElementById('entrada-7');
+let resultado7 = document.getElementById('resultado7');
+let borrar7 = document.getElementById('clear7');
+borrar7.addEventListener('click', () => {
+    palabraIngresada.value = '';
+    resultado7.innerHTML = (':)');
+})
