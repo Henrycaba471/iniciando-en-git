@@ -219,3 +219,50 @@ p{
   border: 1px solid #000;
   margin: 10px;
 }
+
+/*6*/
+.ejercicio-6 label {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #6b8e23;
+  font-weight: 900;
+  padding-right: 10px;
+}
+.ejercicio-6 #pbuscada{
+  width: 220px;
+}
+.ejercicio-6 textarea, input{
+  width: 75%;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(10, 245, 253, 0.5);
+  background: transparent;
+  padding-left: 5px;
+  color: #2F4F4f;
+  margin-bottom: 10px;
+  resize: none;
+  background: rgb(107, 142, 35, 0.2);
+}
+.ejercicio-6 textarea{
+  height: 80px;
+}
+.ejercicio-6 button {
+  font-size: 20px;
+  background: rgb(8, 51, 131);
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  color: #F2F2F0;
+}
+.ejercicio-6 span {
+  display: block;
+  max-width: 90%;
+  font-size: 20px;
+}
+.ejercicio-6 {
+  border: 1px solid #000;
+  margin: 10px;
+  position: relative;
+}

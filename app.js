@@ -59,7 +59,7 @@ const cadenaAArreglo = ()=>{
     let resultado3 = document.getElementById('resultado3');
 
     if (textoAConvertir.length == '') {
-        return resultado3.innerHTML = ('No has ingresado ningun texto');
+        return resultado3.innerHTML = ('No has ingresado ningun texto :(');
     }
     console.log('El texto ingresado es:','"',textoAConvertir,'"', 'y quedaria así:',textoAConvertir.split(separador));
     return resultado3.innerHTML = (`El texto ingresado es: "${textoAConvertir}" y quedaria así: ${textoAConvertir.split(separador)}`);
@@ -84,7 +84,7 @@ const repetirTexto = ()=>{
     let resultado4 = document.getElementById('resultado4');
 
     if (textoARepetir.length == '') {
-        return resultado4.innerHTML = ('No has ingresado ningun texto');
+        return resultado4.innerHTML = ('No has ingresado ningun texto :(');
     }
     if (repetidor.length == '') {
         return resultado4.innerHTML = ('Ingresa las veces a repetir');
@@ -113,7 +113,7 @@ const invertirTexto =()=>{
     let textoAInvertir = document.getElementById('entrada-5').value;
     let resultado5 = document.getElementById('resultado5');
     if (textoAInvertir.length == '') {
-        return resultado5.innerHTML = ('No has ingresado ningun texto');
+        return resultado5.innerHTML = ('No has ingresado ningun texto :(');
     }
     return resultado5.innerHTML = (`El texto a invertir es: "${textoAInvertir}" Quedaria: ${textoAInvertir.split('').reverse().join('')}`);
 }
@@ -125,5 +125,41 @@ let borrar5 = document.getElementById('clear5');
 borrar5.addEventListener('click', ()=>{
     textoAInvertir.value = '';
     resultado5.innerHTML = (':)');
-})
+});
 
+//6
+const buscarPalabra = ()=>{
+
+    let textoAAnalizar = document.getElementById('entrada-6').value;
+    let pbuscada = document.getElementById('pbuscada').value;
+    let resultado6 = document.getElementById('resultado6');
+
+    if (textoAAnalizar.length == '') {
+        return resultado6.innerHTML = ('No has ingresado ningun texto :(');
+    }
+    if (pbuscada.length == '') {
+        return resultado6.innerHTML = ('No has ingresado ninguna palabra a buscar :(');
+    }
+
+    let i = 0;
+    let contador = 0;
+
+    while (i !== -1) {
+        i = textoAAnalizar.indexOf(pbuscada,i);
+        if (i !== -1) {
+            i++;
+            contador++;
+        }
+    }
+    return resultado6.innerHTML = (`En el texto la palabra "${pbuscada}" se repite ${contador} veces`);
+}
+
+let textoAAnalizar = document.getElementById('entrada-6');
+let pbuscada = document.getElementById('pbuscada');
+let borrar6 = document.getElementById('clear6');
+let resultado6 = document.getElementById('resultado6');
+borrar6.addEventListener('click', ()=>{
+    textoAAnalizar.value = '';
+    pbuscada.value = '';
+    resultado6.innerHTML = (':)');
+});

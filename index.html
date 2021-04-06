@@ -24,7 +24,7 @@
         <div class="ejercicio-2">
             <h2 class="dos">Ejercicio 2</h2>
             <p>Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola"</p>
-            <label for="entrada">Ingrese el texto:</label>
+            <label for="entrada-recorte">Ingrese el texto:</label>
             <input type="text" id="entrada-recorte"><br>
             <label for="recorte">Recorte:</label>
             <input type="number" id="recorte"><br>
@@ -35,7 +35,7 @@
         <div class="ejercicio-3">
             <h2 class="tres">Ejercicio 3</h2>
             <p>Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal']</p>
-            <label for="entrada">Ingrese el texto:</label>
+            <label for="entrada-3">Ingrese el texto:</label>
             <input type="text" id="entrada-3"><br>
             <label for="separador">Separdor:</label>
             <input type="text" id="separador"><br>
@@ -46,7 +46,7 @@
         <div class="ejercicio-4">
             <h2 class="cuatro">Ejercicio 4</h2>
             <p>Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.</p>
-            <label for="entrada">Ingrese el texto:</label>
+            <label for="entrada-4">Ingrese el texto:</label>
             <input type="text" id="entrada-4"><br>
             <label for="repetidor">Numero de veces a Repetir:</label>
             <input type="number" id="repetidor"><br>
@@ -57,11 +57,22 @@
         <div class="ejercicio-5">
             <h2 class="cuatro">Ejercicio 5</h2>
             <p>Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH"</p>
-            <label for="entrada">Ingrese el texto:</label>
+            <label for="entrada-5">Ingrese el texto:</label>
             <input type="text" id="entrada-5"><br>
             <button type="submit" id="contar5" onclick="invertirTexto()">Invertir</button>
             <button id="clear5" type="submit">Clear</button><br>
             <span id="resultado5">:)</span>
+        </div>
+        <div class="ejercicio-6">
+            <h2 class="cuatro">Ejercicio 6</h2>
+            <p>Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2</p>
+            <label for="entrada-6" id="ejer6">Ingrese el texto:</label><br>
+            <textarea id="entrada-6"></textarea><br>
+            <label for="pbuscada">Palabra a Buscar:</label>
+            <input type="text" id="pbuscada"><br>
+            <button type="submit" id="contar6" onclick="buscarPalabra()">Buscar</button>
+            <button id="clear6" type="submit">Clear</button>
+            <span id="resultado6">:)</span>
         </div>
 
     </div>
