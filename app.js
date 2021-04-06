@@ -1,29 +1,29 @@
 'use strict';
 //1
-const contarCaracteres = ()=>{
+const contarCaracteres = () => {
     let caracteresTexto = document.getElementById('entrada').value;
     let descripcion = document.getElementById('resultado');
     (caracteresTexto.length == '')
-    ? descripcion.innerHTML=('No has ingresado ningun texto :(')
-    : descripcion.innerHTML=(`En el texto "${caracteresTexto}" hay ${caracteresTexto.length} caracteres :)`);
+        ? descripcion.innerHTML = ('No has ingresado ningun texto :(')
+        : descripcion.innerHTML = (`En el texto "${caracteresTexto}" hay ${caracteresTexto.length} caracteres :)`);
 }
 
 let caracteresTexto = document.getElementById('entrada');
 let borrar = document.getElementById('clear');
 let descripcion = document.getElementById('resultado');
-borrar.addEventListener('click',()=>{
+borrar.addEventListener('click', () => {
     caracteresTexto.value = '';
-    descripcion.innerHTML=(':)')
+    descripcion.innerHTML = (':)')
 });
 
 //2
-const recortarCaracteres = ()=>{
+const recortarCaracteres = () => {
 
     let textoARecortar = document.getElementById('entrada-recorte').value;
     let recorte = document.getElementById('recorte').value;
     let datosProcesados = document.getElementById('resultado2');
 
-    if(textoARecortar.length == ''){
+    if (textoARecortar.length == '') {
         return datosProcesados.innerHTML = ('No hay texto ingresado :(');
     }
     if (recorte.length == '') {
@@ -35,8 +35,8 @@ const recortarCaracteres = ()=>{
     if (textoARecortar.length < recorte) {
         return datosProcesados.innerHTML = ('El valor a recortar es mayor que el texto ingresado :(');
     }
-    if (textoARecortar.length>=1) {
-        return datosProcesados.innerHTML = (`El texto ingresado es: "${textoARecortar}" el valor a recortar es: "${recorte}" El nuevo texto seria: ${textoARecortar.slice(0,recorte)}`);
+    if (textoARecortar.length >= 1) {
+        return datosProcesados.innerHTML = (`El texto ingresado es: "${textoARecortar}" el valor a recortar es: "${recorte}" El nuevo texto seria: ${textoARecortar.slice(0, recorte)}`);
     }
 }
 
@@ -45,14 +45,14 @@ let recorte = document.getElementById('recorte');
 let datosProcesados = document.getElementById('resultado2');
 let borrar2 = document.getElementById('clear2');
 
-borrar2.addEventListener('click',()=>{
+borrar2.addEventListener('click', () => {
     textoARecortar.value = '';
-    datosProcesados.innerHTML=(':)');
+    datosProcesados.innerHTML = (':)');
     recorte.value = '';
 });
 
 //3
-const cadenaAArreglo = ()=>{
+const cadenaAArreglo = () => {
 
     let separador = document.getElementById('separador').value;
     let textoAConvertir = document.getElementById('entrada-3').value;
@@ -61,7 +61,7 @@ const cadenaAArreglo = ()=>{
     if (textoAConvertir.length == '') {
         return resultado3.innerHTML = ('No has ingresado ningun texto :(');
     }
-    console.log('El texto ingresado es:','"',textoAConvertir,'"', 'y quedaria así:',textoAConvertir.split(separador));
+    console.log('El texto ingresado es:', '"', textoAConvertir, '"', 'y quedaria así:', textoAConvertir.split(separador));
     return resultado3.innerHTML = (`El texto ingresado es: "${textoAConvertir}" y quedaria así: ${textoAConvertir.split(separador)}`);
 }
 
@@ -70,14 +70,14 @@ let textoAConvertir = document.getElementById('entrada-3');
 let resultado3 = document.getElementById('resultado3');
 let borrar3 = document.getElementById('clear3');
 
-borrar3.addEventListener('click',()=>{
+borrar3.addEventListener('click', () => {
     textoAConvertir.value = '';
     separador.value = '';
     resultado3.innerHTML = (':)');
 });
 
 //4
-const repetirTexto = ()=>{
+const repetirTexto = () => {
 
     let repetidor = document.getElementById('repetidor').value;
     let textoARepetir = document.getElementById('entrada-4').value;
@@ -93,7 +93,7 @@ const repetirTexto = ()=>{
     resultado4.innerHTML = (`El texto a repetir es: "${textoARepetir}" las vesces a repetir son "${repetidor}" se esta repitiendo por consola`);
 
     for (let i = 1; i <= repetidor; i++) {
-    console.info(textoARepetir,i);
+        console.info(textoARepetir, i);
     }
 }
 
@@ -102,14 +102,14 @@ let textoARepetir = document.getElementById('entrada-4');
 let resultado4 = document.getElementById('resultado4');
 let borrar4 = document.getElementById('clear4');
 
-borrar4.addEventListener('click', ()=>{
+borrar4.addEventListener('click', () => {
     textoARepetir.value = '';
     repetidor.value = '';
     resultado4.innerHTML = (':)');
 })
 
 //5
-const invertirTexto =()=>{
+const invertirTexto = () => {
     let textoAInvertir = document.getElementById('entrada-5').value;
     let resultado5 = document.getElementById('resultado5');
     if (textoAInvertir.length == '') {
@@ -122,13 +122,13 @@ let textoAInvertir = document.getElementById('entrada-5');
 let resultado5 = document.getElementById('resultado5');
 let borrar5 = document.getElementById('clear5');
 
-borrar5.addEventListener('click', ()=>{
+borrar5.addEventListener('click', () => {
     textoAInvertir.value = '';
     resultado5.innerHTML = (':)');
 });
 
 //6
-const buscarPalabra = ()=>{
+const buscarPalabra = () => {
 
     let textoAAnalizar = document.getElementById('entrada-6').value;
     let pbuscada = document.getElementById('pbuscada').value;
@@ -145,7 +145,7 @@ const buscarPalabra = ()=>{
     let contador = 0;
 
     while (i !== -1) {
-        i = textoAAnalizar.indexOf(pbuscada,i);
+        i = textoAAnalizar.indexOf(pbuscada, i);
         if (i !== -1) {
             i++;
             contador++;
@@ -158,7 +158,7 @@ let textoAAnalizar = document.getElementById('entrada-6');
 let pbuscada = document.getElementById('pbuscada');
 let borrar6 = document.getElementById('clear6');
 let resultado6 = document.getElementById('resultado6');
-borrar6.addEventListener('click', ()=>{
+borrar6.addEventListener('click', () => {
     textoAAnalizar.value = '';
     pbuscada.value = '';
     resultado6.innerHTML = (':)');
