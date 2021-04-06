@@ -73,7 +73,7 @@ let borrar3 = document.getElementById('clear3');
 borrar3.addEventListener('click',()=>{
     textoAConvertir.value = '';
     separador.value = '';
-    resultado3.innerHTML = (':)')
+    resultado3.innerHTML = (':)');
 });
 
 //4
@@ -96,4 +96,34 @@ const repetirTexto = ()=>{
     console.info(textoARepetir,i);
     }
 }
+
+let repetidor = document.getElementById('repetidor');
+let textoARepetir = document.getElementById('entrada-4');
+let resultado4 = document.getElementById('resultado4');
+let borrar4 = document.getElementById('clear4');
+
+borrar4.addEventListener('click', ()=>{
+    textoARepetir.value = '';
+    repetidor.value = '';
+    resultado4.innerHTML = (':)');
+})
+
+//5
+const invertirTexto =()=>{
+    let textoAInvertir = document.getElementById('entrada-5').value;
+    let resultado5 = document.getElementById('resultado5');
+    if (textoAInvertir.length == '') {
+        return resultado5.innerHTML = ('No has ingresado ningun texto');
+    }
+    return resultado5.innerHTML = (`El texto a invertir es: "${textoAInvertir}" Quedaria: ${textoAInvertir.split('').reverse().join('')}`);
+}
+
+let textoAInvertir = document.getElementById('entrada-5');
+let resultado5 = document.getElementById('resultado5');
+let borrar5 = document.getElementById('clear5');
+
+borrar5.addEventListener('click', ()=>{
+    textoAInvertir.value = '';
+    resultado5.innerHTML = (':)');
+})
 
