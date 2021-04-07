@@ -348,3 +348,70 @@ p{
   border: 1px solid #000;
   margin: 10px;
 }
+
+/*9*/
+
+.ejercicio-9 {
+  border: 1px solid #000;
+  margin: 10px;
+}
+.ejercicio-9 button {
+  font-size: 20px;
+  background: rgb(8, 51, 131);
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  color: #F2F2F0;
+  margin-bottom: 15px;
+}
+.ejercicio-9 label {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #6b8e23;
+  font-weight: 900;
+  padding-right: 10px;
+}
+.ejercicio-9 #num__aleatorio{
+  font-size: 25px;
+  color: #6b8e23;
+}
+
+/*10*/
+.ejercicio-10 label {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #6b8e23;
+  font-weight: 900;
+  padding-right: 10px;
+}
+.ejercicio-10 input {
+  width: 50%;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(10, 245, 253, 0.5);
+  background: transparent;
+  padding-left: 5px;
+  color: #2F4F4f;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.ejercicio-10 button {
+  font-size: 20px;
+  background: rgb(8, 51, 131);
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  color: #F2F2F0;
+}
+.ejercicio-10 span {
+  display: block;
+  max-width: 90%;
+  font-size: 20px;
+}
+.ejercicio-10 {
+  border: 1px solid #000;
+  margin: 10px;
+}

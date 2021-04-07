@@ -164,7 +164,7 @@ borrar6.addEventListener('click', () => {
     resultado6.innerHTML = (':)');
 });
 
-//7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+//7
 const textoPalindromo = () => {
 
     let palabraIngresada = document.getElementById('entrada-7').value;
@@ -190,9 +190,9 @@ let borrar7 = document.getElementById('clear7');
 borrar7.addEventListener('click', () => {
     palabraIngresada.value = '';
     resultado7.innerHTML = (':)');
-})
+});
 
-//8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá "1, 2, 3, 4 y 5.
+//8
 const eliminarPatron = () => {
 
     let textoPatron = document.getElementById('entrada-8').value;
@@ -219,6 +219,43 @@ borrar8.addEventListener('click', () => {
     textoPatron.value = '';
     patron.value = '';
     resultado8.innerHTML = (':)');
-})
+});
 
+//9
+const numeroAleatorio = () => {
 
+    let numAleatorio = document.getElementById('num__aleatorio');
+    numAleatorio.innerHTML = (Math.round(Math.random()*101 + 500));
+}
+
+let numAleatorio = document.getElementById('num__aleatorio');
+let borrar9 = document.getElementById('clear9');
+borrar9.addEventListener('click', () => {
+    numAleatorio.innerHTML = (':)');
+});
+
+//10
+const numeroCapicua = () => {
+    let numeroAnalizar = document.getElementById('entrada-10').value;
+    let resultado10 = document.getElementById('resultado10');
+
+    let compararNum = numeroAnalizar.split('').reverse().join('');
+
+    if(!numeroAnalizar){
+
+        return resultado10.innerHTML = (`El campo no puede estar vacio`);
+    }
+
+    (compararNum === numeroAnalizar)
+        ? resultado10.innerHTML = (`El numero ingresado "${numeroAnalizar}" Es un numero capicúa`)
+        : resultado10.innerHTML = (`El numero ingresado "${numeroAnalizar}" No es un numero capicúa`);
+}
+
+let numeroAnalizar = document.getElementById('entrada-10');
+let resultado10 = document.getElementById('resultado10');
+let borrar10 = document.getElementById('clear10');
+
+borrar10.addEventListener('click', () => {
+    numeroAnalizar.value = '';
+    resultado10.innerHTML = (':)');
+});
