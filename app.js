@@ -166,6 +166,7 @@ borrar6.addEventListener('click', () => {
 
 //7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
 const textoPalindromo = () => {
+
     let palabraIngresada = document.getElementById('entrada-7').value;
     let resultado7 = document.getElementById('resultado7');
     if (!palabraIngresada) {
@@ -190,3 +191,34 @@ borrar7.addEventListener('click', () => {
     palabraIngresada.value = '';
     resultado7.innerHTML = (':)');
 })
+
+//8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá "1, 2, 3, 4 y 5.
+const eliminarPatron = () => {
+
+    let textoPatron = document.getElementById('entrada-8').value;
+    let patron = document.getElementById('patron').value;
+    let resultado8 = document.getElementById('resultado8');
+
+    if (!textoPatron) {
+        return resultado8.innerHTML = ('No has ingresado ningun texto :(');
+    }
+    if (!patron) {
+        return resultado8.innerHTML = ('Ingresa el patron a eliminar :(');
+    }
+
+    return resultado8.innerHTML = (`Vamos a eliminar el "${patron}" del texto ${textoPatron.replace(new RegExp(patron, 'ig'),'')}`);
+
+}
+
+let textoPatron = document.getElementById('entrada-8');
+let patron = document.getElementById('patron');
+let resultado8 = document.getElementById('resultado8');
+let borrar8 = document.getElementById('clear8');
+
+borrar8.addEventListener('click', () => {
+    textoPatron.value = '';
+    patron.value = '';
+    resultado8.innerHTML = (':)');
+})
+
+
