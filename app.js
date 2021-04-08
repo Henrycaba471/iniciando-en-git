@@ -296,4 +296,44 @@ borrar11.addEventListener('click', () => {
     resultado11.innerText = (':)');
 });
 
+//12
+const numeroPrimo = () => {
+    const numPrimo = document.getElementById('entrada-12').value;
+    const resultado12 = document.getElementById('resultado12');
 
+    if (!numPrimo) {
+        return resultado12.innerText = ('No has ingresado ningun número');
+    }
+    if (numPrimo === '0') {
+        return resultado12.innerText = ('El numero 0 no aplica :(');
+    }
+
+    if (numPrimo === '1') {
+        return resultado12.innerText = ('El numero 1 no aplica :(');
+    }
+    if (Math.sign(numPrimo) === -1) {
+        return resultado12.innerText = ('Has ingresado un numero negativo');
+    }
+
+    let divisible = false;
+    for (let i = 2; i < numPrimo; i++) {
+        if ((numPrimo % i) === 0) {
+            divisible =true;
+            break
+        }
+    }
+    return (divisible)
+    ? resultado12.innerText = (`El numero ${numPrimo} no es primo`)
+    : resultado12.innerText = (`El numero ${numPrimo} si es primo`);
+}
+
+const numPrimo = document.getElementById('entrada-12');
+const resultado12 = document.getElementById('resultado12');
+const borrar12 = document.getElementById('clear12');
+
+borrar12.addEventListener('click', () => {
+    numPrimo.value = '';
+    resultado12.innerText = (':)');
+});
+
+//13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
