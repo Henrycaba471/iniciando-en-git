@@ -415,3 +415,43 @@ p{
   border: 1px solid #000;
   margin: 10px;
 }
+
+/*11*/
+.ejercicio-11{
+  border: 1px solid #000;
+  margin: 10px;
+}
+
+.ejercicio-11 label{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #6b8e23;
+    font-weight: 900;
+    padding-right: 10px;
+}
+.ejercicio-11 input{
+    width: 60%;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(10, 245, 253, 0.5);
+    background: transparent;
+    padding-left: 5px;
+    color: #2F4F4f;
+    margin-bottom: 10px;
+}
+
+.ejercicio-11 button{
+    font-size: 20px;
+    background: rgb(8, 51, 131);
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    color: #F2F2F0;
+}
+.ejercicio-11 span{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+}

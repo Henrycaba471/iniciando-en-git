@@ -259,3 +259,41 @@ borrar10.addEventListener('click', () => {
     numeroAnalizar.value = '';
     resultado10.innerHTML = (':)');
 });
+
+//11
+const calcFactorial = () => {
+    let factorial = document.getElementById('entrada-11').value;
+    let resultado11 = document.getElementById('resultado11');
+
+    //factorial = Math.abs(factorial) convertir a absoluto;
+    //factorial = parseInt(factorial) convertir a entero;
+
+    if (!factorial) {
+        return resultado11.innerText = ('No has ingresado ningun numero :(');
+    }
+    if (factorial === '0') {
+        return resultado11.innerText = ('El numero 0 no tiene factorial :(')
+    }
+
+    if (Math.sign(factorial) === -1) {
+        return resultado11.innerText = ('Has ingresado un numero negativo');
+    }
+
+    let calFact = 1
+    for (let i = factorial; i > 1; i--) {
+        calFact *= i;
+    }
+
+    return resultado11.innerText = (`El factorial de ${factorial} es ${calFact}`);
+}
+
+const factorial = document.getElementById('entrada-11');
+const resultado11 = document.getElementById('resultado11');
+const borrar11 = document.getElementById('clear11');
+
+borrar11.addEventListener('click', () => {
+    factorial.value = '';
+    resultado11.innerText = (':)');
+});
+
+
