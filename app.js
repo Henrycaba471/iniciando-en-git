@@ -336,4 +336,56 @@ borrar12.addEventListener('click', () => {
     resultado12.innerText = (':)');
 });
 
-//13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+//13
+const numeroParImpar = () => {
+    const numEvaluar = document.getElementById('entrada-13').value;
+    const resultado13 = document.getElementById('resultado13');
+
+    if (!numEvaluar) {
+        return resultado13.innerText = ('No has ingresado ningun texto :(');
+    }
+    ((numEvaluar % 2) === 0)
+        ? resultado13.innerText = (`El numero ${numEvaluar} es Par`)
+        : resultado13.innerText = (`El numero ${numEvaluar} es Impar`);
+}
+
+const numEvaluar = document.getElementById('entrada-13');
+const resultado13 = document.getElementById('resultado13');
+const borrar13 = document.getElementById('clear13');
+
+borrar13.addEventListener('click', () => {
+    numEvaluar.value = '';
+    resultado13.innerText = (':)');
+});
+
+//14
+const convertirGrados = () => {
+    const gradosInsert = document.getElementById('entrada-14').value;
+    const unidad = document.getElementById('tipoGrados').value;
+    const resultado14 = document.getElementById('resultado14');
+
+    //unidad = unidad.toUpperCase();
+    if (!gradosInsert) {
+        return resultado14.innerText = ('No has ingresado ningun valor');
+    }
+    if (unidad.length !== 1 || !/(C|F)/.test(unidad)) {
+        return resultado14.innerText = ('Valor de unidad no reconocida, el valor de la unidad debe ser insertado en mayuscula');
+    }
+    if (unidad === 'C') {
+        return resultado14.innerText = (`${gradosInsert}°C = ${Math.round(gradosInsert*(9/5)+32)}°F`)
+    }
+    if (unidad === 'F') {
+        return resultado14.innerText = (`${gradosInsert}°F = ${Math.round(((gradosInsert - 32)*(5/9)))}°C`);
+    }
+}
+
+const gradosInsert = document.getElementById('entrada-14');
+const unidad = document.getElementById('tipoGrados');
+const resultado14 = document.getElementById('resultado14');
+const borrar14 = document.getElementById('clear14');
+
+borrar14.addEventListener('click', () => {
+    gradosInsert.value = '';
+    unidad.value = '';
+    resultado14.innerText = (':)');
+});
