@@ -13,7 +13,7 @@ let borrar = document.getElementById('clear');
 let descripcion = document.getElementById('resultado');
 borrar.addEventListener('click', () => {
     caracteresTexto.value = '';
-    descripcion.innerHTML = (':)')
+    descripcion.innerHTML = ('😃')
 });
 
 //2
@@ -47,7 +47,7 @@ let borrar2 = document.getElementById('clear2');
 
 borrar2.addEventListener('click', () => {
     textoARecortar.value = '';
-    datosProcesados.innerHTML = (':)');
+    datosProcesados.innerHTML = ('😃');
     recorte.value = '';
 });
 
@@ -73,7 +73,7 @@ let borrar3 = document.getElementById('clear3');
 borrar3.addEventListener('click', () => {
     textoAConvertir.value = '';
     separador.value = '';
-    resultado3.innerHTML = (':)');
+    resultado3.innerHTML = ('😃');
 });
 
 //4
@@ -105,7 +105,7 @@ let borrar4 = document.getElementById('clear4');
 borrar4.addEventListener('click', () => {
     textoARepetir.value = '';
     repetidor.value = '';
-    resultado4.innerHTML = (':)');
+    resultado4.innerHTML = ('😃');
 })
 
 //5
@@ -124,7 +124,7 @@ let borrar5 = document.getElementById('clear5');
 
 borrar5.addEventListener('click', () => {
     textoAInvertir.value = '';
-    resultado5.innerHTML = (':)');
+    resultado5.innerHTML = ('😃');
 });
 
 //6
@@ -161,7 +161,7 @@ let resultado6 = document.getElementById('resultado6');
 borrar6.addEventListener('click', () => {
     textoAAnalizar.value = '';
     pbuscada.value = '';
-    resultado6.innerHTML = (':)');
+    resultado6.innerHTML = ('😃');
 });
 
 //7
@@ -189,7 +189,7 @@ let resultado7 = document.getElementById('resultado7');
 let borrar7 = document.getElementById('clear7');
 borrar7.addEventListener('click', () => {
     palabraIngresada.value = '';
-    resultado7.innerHTML = (':)');
+    resultado7.innerHTML = ('😃');
 });
 
 //8
@@ -218,7 +218,7 @@ let borrar8 = document.getElementById('clear8');
 borrar8.addEventListener('click', () => {
     textoPatron.value = '';
     patron.value = '';
-    resultado8.innerHTML = (':)');
+    resultado8.innerHTML = ('😃');
 });
 
 //9
@@ -231,7 +231,7 @@ const numeroAleatorio = () => {
 let numAleatorio = document.getElementById('num__aleatorio');
 let borrar9 = document.getElementById('clear9');
 borrar9.addEventListener('click', () => {
-    numAleatorio.innerHTML = (':)');
+    numAleatorio.innerHTML = ('😃');
 });
 
 //10
@@ -257,7 +257,7 @@ let borrar10 = document.getElementById('clear10');
 
 borrar10.addEventListener('click', () => {
     numeroAnalizar.value = '';
-    resultado10.innerHTML = (':)');
+    resultado10.innerHTML = ('😃');
 });
 
 //11
@@ -293,7 +293,7 @@ const borrar11 = document.getElementById('clear11');
 
 borrar11.addEventListener('click', () => {
     factorial.value = '';
-    resultado11.innerText = (':)');
+    resultado11.innerText = ('😃');
 });
 
 //12
@@ -333,7 +333,7 @@ const borrar12 = document.getElementById('clear12');
 
 borrar12.addEventListener('click', () => {
     numPrimo.value = '';
-    resultado12.innerText = (':)');
+    resultado12.innerText = ('😃');
 });
 
 //13
@@ -355,7 +355,7 @@ const borrar13 = document.getElementById('clear13');
 
 borrar13.addEventListener('click', () => {
     numEvaluar.value = '';
-    resultado13.innerText = (':)');
+    resultado13.innerText = ('😃');
 });
 
 //14
@@ -387,7 +387,39 @@ const borrar14 = document.getElementById('clear14');
 borrar14.addEventListener('click', () => {
     gradosInsert.value = '';
     unidad.value = '';
-    resultado14.innerText = (':)');
+    resultado14.innerText = ('😃');
 });
 
 //15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
+const decimalBinario = () => {
+  let datosInser = document.getElementById('entrada-15').value;
+  let base = document.getElementById('base').value;
+  const resultado15 = document.getElementById('resultado15');
+  datosInser = parseInt(datosInser);
+  base = parseInt(base);
+  if (!datosInser) {
+    return resultado15.innerText = ('No has insertado ningun valor');
+  }
+  if (!base) {
+    return resultado15.innerText = ('Debes ingresar la base a convertir');
+  }
+  if (!(/2|10/).test(base)){
+    return resultado15.innerText = ('Por ahora solo se permiten binario y decimal');
+  }
+  if (base === 2) {
+    return resultado15.innerText =(`${datosInser} base ${base} es igual a ${parseInt(datosInser,base)} base 10`);
+  }
+  if (base === 10) {
+    return resultado15.innerText = (`${datosInser} base ${base} es igual a ${datosInser.toString(2)} base 2`);
+  }
+}
+
+const datosInser = document.getElementById('entrada-15');
+const base = document.getElementById('base');
+const resultado15 = document.getElementById('resultado15');
+const borrar15 = document.getElementById('clear15');
+borrar15.addEventListener('click', () => {
+  datosInser.value = '';
+  base.value = '';
+  resultado15.innerText = ('😃');
+})
